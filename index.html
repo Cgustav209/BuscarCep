@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscador de CEP</title>
+    <link rel="stylesheet" href="./stryle.css">
+</head>
+<body>
+    
+    <div class="container">
+        <h1>Consulta de CEP</h1>
+
+        <div class="grupoCep">
+
+        <label> CEP</label>
+        <input type="text" id="cep" placeholder="Ex: 00345678">
+        <button id="btnBuscar">Buscar</button> 
+
+        </div>
+     
+        <div class="grupoCampos">
+            <!-- logradouro significa rua, avenida, etc -->
+            <!--"for" é para associar o label ao input-->
+            <label for="logradouro"> Logradouro</label>
+            <input type="text" id="logradouro" readonly>
+             <!--readonly deixa o campo apenas para leitura, ou seja, o usuário não pode editar o valor, apenas visualizar o resultado da consulta do CEP.-->
+
+        </div>
+
+        <div class="grupoCampos">
+            <label for="bairro"> Bairro</label>
+            <input type="text" id="bairro" readonly>
+        </div>
+        <div class="grupoLadoaLado">
+            <div class="grupoCampos">
+                <label for="cidade"> Cidade</label>
+                <input type="text" id="cidade" readonly>
+            </div>
+            <div class="grupoCampos">
+                <label for="estado"> Estado</label>
+                <input type="text" id="estado" readonly>
+            </div>
+        </div>
+    </div>
+
+    <!--  melhorar a organização do código, colocando o script no final do body, para garantir que o DOM esteja completamente carregado antes de executar o script, evitando erros relacionados a elementos que ainda não foram carregados. -->
+    <script src="./script.js"></script>
+</body>
+</html>

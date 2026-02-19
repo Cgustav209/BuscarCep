@@ -1,0 +1,94 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --principal: #BFA17B;
+    --segundaria: #383533;
+    --tercearia: #24383B;
+    --text-segundaria: #ffffff;
+    --text-padrao: #24383B;
+    --shadow-color: #AAAAAA;
+    --input-border-color: #3177d3;
+    --input-readonly-color: #e6e7e7;
+    --input-readonly-text-color: #606060;
+    --fundo: #515947;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: var(--fundo);
+    display: flex;
+    justify-content: center;
+    padding: 40px 16px;
+
+}
+
+.container {
+    background: var(--principal);
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    width: 100%;
+    max-width: 500px;
+}
+
+h1 {
+    color: var(--text-padrao);
+    margin-bottom: 24px;
+}s
+
+.grupoCampos {
+    display: flex;
+    flex-direction: column;
+}
+
+.grupoLadoaLado {
+    display: flex;
+    gap: 16px;
+}
+
+label{
+    font-size: 15px;
+    font-weight: 600; /* serve para dar ênfase ao texto */
+    color: var(--tercearia);
+    margin-bottom: 10px;
+}
+.grupoCep{
+    margin-bottom: 24px;
+}
+
+input[type="text"] {
+    border:2px solid var(--shadow-color);
+    border-radius: 10px;
+    padding: 10px 14px ;
+    font-size: 16px;
+    width: 100%;
+    outline: none;
+}
+/* :focus serve para estilizar o elemento quando ele está em foco, geralmente após ser clicado ou selecionado pelo teclado */
+input[type="text"]:focus {
+    border-color: var(--input-border-color);
+    box-shadow: 0 0 5px var(--input-border-color);
+}
+
+input[readonly] {
+    background-color: var(--input-readonly-color);
+    color: var(--input-readonly-text-color);
+}
+button {
+    background-color: var(--segundaria);
+    padding: 10px 24px;
+    color: var(--text-segundaria);
+    border:none;
+    border-radius: 8px;
+    font-weight: 600; 
+    transition: background-color 0.3s ease;
+    margin-top: 8px;
+    cursor: pointer;
+}
+/* :hover é um pseudo-classe que é ativada quando o usuário passa o mouse sobre o elemento, no caso muda de cor */
+button:hover {
+    background-color: var(--tercearia);
+}
